@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+	<div class="container-fluid">
+		<a
+			class="navbar-brand"
+			href="/listings"
+			><i class="fa-regular fa-compass"></i>
+			<p>airbnb</p></a
+		>
+		<div class="navbar-nav ms-auto searchNav">
+			<form
+				class="d-flex"
+				role="search"
+				method="GET"
+				action="/search">
+				<input
+					class="form-control me-2 search-input"
+					type="search"
+					name="q"
+					placeholder="Search destinations" />
+				<button
+					class="btn search-btn"
+					type="submit">
+					<i class="fa-solid fa-magnifying-glass"></i>Search
+				</button>
+			</form>
+		</div>
+
+		<div class="navbar-nav ms-auto userInfoNav">
+			<a
+				class="nav-link"
+				href="/listings/new"
+				>Airbnb your home</a
+			>
+
+			<% if(!currentUser){ %>
+			<a
+				class="nav-link"
+				href="/signup"
+				><b>Sign Up</b></a
+			>
+			<a
+				class="nav-link"
+				href="/login"
+				><b>Log In</b></a
+			>
+			<% } %> <% if(currentUser){ %>
+			<a class="nav-link"><b><%= currentUser.username %></b></a>
+			<a
+				class="nav-link"
+				href="/logout"
+				><b>Log Out</b></a
+			>
+			<% } %>
+		</div>
+	</div>
+</nav>

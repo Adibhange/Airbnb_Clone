@@ -1,0 +1,231 @@
+body {
+	font-family: "Plus Jakarta Sans", sans-serif !important;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	flex: 1;
+}
+
+/*====================================== NAVBAR ======================================*/
+.navbar {
+	height: 5rem;
+	background-color: #fff;
+}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-brand p {
+	color: #fe424d !important;
+	font-size: 1.5rem !important;
+	padding-left: 0.5rem;
+	margin: 0; /* set margin to 0 to remove any default margin that may  be applied by Bootstrap */
+}
+
+.fa-compass {
+	color: #fe424d;
+	font-size: 2rem;
+}
+
+.nav-link {
+	color: #222222 !important; /*  Bootstrap styling is used so using "!important" we can use our styling */
+}
+
+.search-btn {
+	background-color: #fe424d !important;
+	color: #fff !important;
+	border-radius: 25px !important;
+	padding: 0 1rem 0 1rem !important;
+}
+
+.search-btn i {
+	display: inline !important;
+	margin-right: 0.5rem;
+}
+
+.search-input {
+	padding: 0.5rem 3rem 0.5rem 3rem !important;
+	border-radius: 25px !important;
+}
+
+.searchNav {
+	display: flex !important;
+}
+
+.userInfoNav {
+	display: flex !important;
+}
+
+/*====================================== FOOTER ======================================*/
+.f-info {
+	text-align: center;
+	background-color: #ebebeb;
+	height: 8rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: space-evenly;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.f-info-socials i {
+	font-size: 1.2rem;
+	margin-right: 1rem;
+}
+
+.f-info-links a {
+	text-decoration: none;
+	color: #222222;
+}
+
+.f-info-links a:hover {
+	text-decoration: underline;
+}
+
+/*====================================== INDEX PAGE / CATEGORY BAR  ======================================*/
+#filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.filter {
+	text-align: center;
+	margin-top: 2rem;
+	margin-right: 2rem;
+	opacity: 0.7;
+}
+
+.filter:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.filter p {
+	font-size: 0.8rem;
+}
+
+.filter a {
+	text-decoration: none !important;
+	color: #222222;
+}
+
+.tax-info {
+	display: none;
+}
+
+.tax-toggle {
+	border: 1px solid black;
+	border-radius: 1rem;
+	height: 3.25rem;
+	padding: 1rem;
+	margin-left: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+/*====================================== INDEX PAGE / CARDS  ======================================*/
+
+.listing-card {
+	border: none !important;
+	margin-bottom: 2rem;
+}
+
+.card-img-top {
+	border-radius: 1rem !important;
+	width: 100% !important;
+	object-fit: cover !important;
+}
+
+.card-body {
+	padding: 0 !important;
+}
+
+.card-text p {
+	font-weight: 400;
+}
+
+.listing-link {
+	text-decoration: none;
+}
+
+/* CARD EFFECT */
+.card-img-overlay {
+	opacity: 0;
+}
+
+.card-img-overlay:hover {
+	opacity: 0.2;
+	background-color: #fff;
+}
+
+/*====================================== CREATE NEW LISTING PAGE ======================================*/
+.add-btn {
+	background-color: #fe424d !important;
+	border: none !important;
+}
+
+/*====================================== EDIT LISTING DETAIL PAGE ======================================*/
+.edit-btn {
+	background-color: #fe424d !important;
+	border: none !important;
+}
+
+/*====================================== SHOW LISTING DETAIL PAGE ======================================*/
+.show-card {
+	padding-left: 0;
+	padding-right: 0;
+}
+.show-image {
+	height: 30vh;
+}
+
+.btns {
+	display: flex;
+}
+
+/*====================================== SHOW MAP  ======================================*/
+#map {
+	height: 400px;
+	width: 80vh;
+}
+
+/*====================================== MEDIA QUERY ======================================*/
+
+@media screen and (max-width: 800px) {
+	.navbar-nav {
+		flex-direction: column !important ;
+		align-items: center !important;
+	}
+
+	.searchNav {
+		order: 2 !important;
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.search-input {
+		padding: 0.5rem 5rem 0.5rem 5rem !important;
+	}
+
+	.userInfoNav {
+		display: none !important;
+	}
+
+	#filters {
+		display: none;
+	}
+}
